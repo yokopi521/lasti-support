@@ -1,0 +1,39 @@
+name: Support Request
+description: Lasti support / Lastiサポート
+title: "[Support] "
+labels: [support]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        日本語・Englishどちらでもご利用いただけます。
+        This request is public. Do not include personal information, dates of birth, or purchase receipts.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / 種別
+      options:
+        - Purchase or restore / 購入・復元
+        - Widget / ウィジェット
+        - App usage / 使い方
+        - Privacy / プライバシー
+        - Other / その他
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version / アプリのバージョン
+      placeholder: "1.0"
+  - type: input
+    id: device
+    attributes:
+      label: Device and iOS version / 端末とiOSバージョン
+      placeholder: "iPhone 17, iOS 26"
+  - type: textarea
+    id: details
+    attributes:
+      label: Details / 内容
+      description: Do not include personal information or purchase receipts. / 個人情報や購入レシートは記載しないでください。
+    validations:
+      required: true
